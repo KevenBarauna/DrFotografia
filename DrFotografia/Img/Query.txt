@@ -1,0 +1,29 @@
+CREATE DATABASE DalRo
+
+GO
+
+CREATE TABLE TB_USUARIO
+(
+	[id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[nome] VARCHAR(20) NOT NULL,
+        [senha] VARCHAR(20) NOT NULL,
+	[email] VARCHAR(50) NOT NULL,
+	[logado] bit NULL
+)
+
+GO
+
+INSERT INTO TB_USUARIO (nome,senha) VALUES ('admin','admin')
+INSERT INTO TB_USUARIO (nome,senha) VALUES ('keven','123')
+
+GO
+
+SELECT * FROM TB_USUARIO 
+
+--DROP TABLE TB_; 
+--DELETE FROM TB_USUARIO WHERE id = 5
+Cores:
+42;42;46 <- Fundo
+50; 88; 253 <-Botão
+209; 15; 60 <=Siar
+255; 239; 59 <=Amarelo
