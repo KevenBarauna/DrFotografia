@@ -36,5 +36,19 @@ namespace DrFotografia.View.Usuarios
             tela.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TodosUsuarios tela = new TodosUsuarios();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ApagarUsuario tela = new ApagarUsuario();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

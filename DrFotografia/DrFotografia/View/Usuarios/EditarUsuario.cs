@@ -16,5 +16,10 @@ namespace DrFotografia.View.Usuarios
         {
             InitializeComponent();
         }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

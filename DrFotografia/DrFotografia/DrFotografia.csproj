@@ -85,6 +85,12 @@
     <Compile Include="View\Usuarios\PainelUsuarios.Designer.cs">
       <DependentUpon>PainelUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Usuarios\TodosUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\TodosUsuarios.Designer.cs">
+      <DependentUpon>TodosUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuarios\PainelUsuarios.resx">
       <DependentUpon>PainelUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuarios\TodosUsuarios.resx">
+      <DependentUpon>TodosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

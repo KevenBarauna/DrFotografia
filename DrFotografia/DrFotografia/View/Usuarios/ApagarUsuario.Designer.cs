@@ -183,6 +183,7 @@
             this.BtnSair.TabIndex = 55;
             this.BtnSair.Text = "Voltar pro inicio";
             this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // TxtConfSenha
             // 
