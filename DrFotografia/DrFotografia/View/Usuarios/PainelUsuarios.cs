@@ -21,5 +21,20 @@ namespace DrFotografia.View.Usuarios
         {
             this.Hide();
         }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            NovoUsuario tela = new NovoUsuario();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            EditarUsuario tela = new EditarUsuario();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

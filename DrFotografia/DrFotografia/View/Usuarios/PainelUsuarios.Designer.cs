@@ -62,6 +62,7 @@
             this.Btn.Size = new System.Drawing.Size(122, 93);
             this.Btn.TabIndex = 8;
             this.Btn.UseVisualStyleBackColor = false;
+            this.Btn.Click += new System.EventHandler(this.Btn_Click);
             // 
             // panel4
             // 
@@ -113,9 +114,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(21, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(83, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Novo usuário";
+            this.label1.Text = "Editar usuário";
             // 
             // button1
             // 
@@ -129,6 +130,7 @@
             this.button1.Size = new System.Drawing.Size(122, 93);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
