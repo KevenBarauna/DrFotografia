@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DrFotografia
+namespace DrFotografia.View
 {
-    public partial class Login : Form
+    public partial class Home : Form
     {
-        public Login()
+        public Home()
         {
             InitializeComponent();
         }

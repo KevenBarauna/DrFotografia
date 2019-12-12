@@ -7,3 +7,4 @@ C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\D
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.csproj.GenerateResource.cache
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.exe
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.pdb
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Home.resources

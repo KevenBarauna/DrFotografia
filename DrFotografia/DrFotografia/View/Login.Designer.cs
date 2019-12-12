@@ -127,6 +127,7 @@
             this.BtnEntrar.TabIndex = 7;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // BtnSair
             // 
