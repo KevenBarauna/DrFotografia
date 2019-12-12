@@ -158,6 +158,7 @@
             this.BtnUsuario.TabIndex = 9;
             this.BtnUsuario.Text = "Usuários";
             this.BtnUsuario.UseVisualStyleBackColor = false;
+            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // ImgPerfil
             // 
