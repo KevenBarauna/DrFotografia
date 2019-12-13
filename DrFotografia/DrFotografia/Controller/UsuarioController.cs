@@ -109,6 +109,23 @@ namespace DrFotografia.Controller
             return usuario;
         }//RETORNA USUARIO MODEL
 
+        public UsuarioModel PegarDadosDoUsuarioPorNome(string Nome)
+        {
+            UsuarioModel usuario = new UsuarioModel();
+            UsuarioDAO dao = new UsuarioDAO();
+
+            //PEGAR DADOS DO USUARIO
+            usuario = dao.BuscaDadosUsuarioPorNome(Nome);
+
+            if (usuario.Id == 0)
+            {
+                MessageBox.Show("Erro! Não existe um usuário com esse nome e senha");
+                return usuario;
+            }
+
+            return usuario;
+        }//RETORNA USUARIO MODEL
+
         public bool EditarUsuario(string Nome, string Senha, string Senhaconf, string Email, int Id)
         {
 
@@ -176,6 +193,35 @@ namespace DrFotografia.Controller
 
             return ListaUsuarios;
         }//SALVAR NOVO USUARIO
+
+        public bool VerificaAdmin()
+        {
+            bool acesso;
+            UsuarioDAO dao = new UsuarioDAO();
+            acesso = dao.ValidarAdmin();
+
+            return acesso;
+
+        }//VERIFICA SE USUARIO LOGADO É ADMIN
+
+        public bool apagarUsuario(int id)
+        {
+            bool apagado;
+            UsuarioDAO dao = new UsuarioDAO();
+            apagado = dao.ApagarUsuario(id);
+
+            if (apagado == true)
+            {
+                MessageBox.Show("Usuário apagado do banco de dados");
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Erro ao apagar usuário");
+                return false;
+            }
+
+        }//VERIFICA SE USUARIO LOGADO É ADMIN
 
 
     }

@@ -163,6 +163,42 @@ namespace DrFotografia.DAO
             return usuario;
         }//PEGA TODOS OS DADOS DO USUARIO
 
+        public UsuarioModel BuscaDadosUsuarioPorNome(string Nome)
+        {
+            UsuarioModel usuario = new UsuarioModel();
+
+            SqlDataReader dr;
+
+            cmd.CommandText = "SELECT * FROM TB_USUARIO WHERE nome = @nome";
+
+            cmd.Parameters.AddWithValue("@nome", Nome);
+
+            try
+            {
+                cmd.Connection = conexao.Conectar();
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dr.Read();
+
+                    usuario.Id = Convert.ToInt32(dr["id"]);
+                    usuario.Nome = dr["nome"].ToString();
+                    usuario.Senha = dr["senha"].ToString();
+                    usuario.Email = dr["email"].ToString();
+                }
+
+            }
+            catch (SqlException e)
+            {
+                return null;
+            }
+            cmd.Parameters.Clear();
+            conexao.Desconectar();
+
+            return usuario;
+        }//PEGA TODOS OS DADOS DO USUARIO
+
         public bool EditarUsuario(string nome, string senha, string email, int id)
         {
 
@@ -238,6 +274,77 @@ namespace DrFotografia.DAO
 
             return ListadeUsuario;
         }//VERIFICA SE TEM ESSE NOME NO BANCO
+
+        public bool ValidarAdmin()
+        {
+
+            SqlDataReader dr;
+
+            cmd.CommandText = "SELECT * FROM TB_USUARIO WHERE logado = 1";
+
+            try
+            {
+                cmd.Connection = conexao.Conectar();
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+
+                    dr.Read();
+
+                    UsuarioModel usuario = new UsuarioModel();
+
+                    usuario.Id = Convert.ToInt32(dr["id"]);
+
+                    if (usuario.Id == 3)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+
+            }
+            catch (SqlException e)
+            {
+                return false;
+            }
+            cmd.Parameters.Clear();
+            conexao.Desconectar();
+
+            return false;
+        }//VERIFICA SE USUARIO E ADMIN
+
+        public bool ApagarUsuario(int id)
+        {
+
+            SqlDataReader dr;
+
+            cmd.CommandText = "DELETE FROM TB_USUARIO WHERE id = @id";
+
+            cmd.Parameters.AddWithValue("@id", id); 
+
+            try
+            {
+                cmd.Connection = conexao.Conectar();
+                dr = cmd.ExecuteReader();
+
+            }
+            catch (SqlException e)
+            {
+                cmd.Parameters.Clear();
+                conexao.Desconectar();
+                return false;
+            }
+            cmd.Parameters.Clear();
+            conexao.Desconectar();
+
+            return true;
+
+        }//APAGAR USUARIO
 
     }
 }

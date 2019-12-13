@@ -37,11 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.TxtEmail = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.TxtConfSenha = new System.Windows.Forms.TextBox();
             this.BtnApagar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -53,7 +50,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +76,7 @@
             this.BrnPesquisar.TabIndex = 64;
             this.BrnPesquisar.Text = "Pesquisar";
             this.BrnPesquisar.UseVisualStyleBackColor = false;
+            this.BrnPesquisar.Click += new System.EventHandler(this.BrnPesquisar_Click);
             // 
             // panel6
             // 
@@ -125,7 +122,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(19, 461);
+            this.panel4.Location = new System.Drawing.Point(18, 423);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(194, 1);
             this.panel4.TabIndex = 50;
@@ -133,20 +130,12 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 439);
+            this.pictureBox5.Location = new System.Drawing.Point(18, 401);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 48;
             this.pictureBox5.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(19, 419);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 1);
-            this.panel3.TabIndex = 56;
             // 
             // TxtEmail
             // 
@@ -154,22 +143,12 @@
             this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.ForeColor = System.Drawing.Color.White;
-            this.TxtEmail.Location = new System.Drawing.Point(45, 439);
+            this.TxtEmail.Location = new System.Drawing.Point(44, 401);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.ReadOnly = true;
             this.TxtEmail.Size = new System.Drawing.Size(168, 14);
             this.TxtEmail.TabIndex = 46;
             this.TxtEmail.Text = "email@hotmail.com";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(19, 397);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 54;
-            this.pictureBox4.TabStop = false;
             // 
             // BtnSair
             // 
@@ -177,7 +156,7 @@
             this.BtnSair.FlatAppearance.BorderSize = 0;
             this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSair.ForeColor = System.Drawing.Color.White;
-            this.BtnSair.Location = new System.Drawing.Point(68, 530);
+            this.BtnSair.Location = new System.Drawing.Point(67, 492);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(108, 30);
             this.BtnSair.TabIndex = 55;
@@ -185,32 +164,19 @@
             this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // TxtConfSenha
-            // 
-            this.TxtConfSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.TxtConfSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtConfSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtConfSenha.ForeColor = System.Drawing.Color.White;
-            this.TxtConfSenha.Location = new System.Drawing.Point(45, 397);
-            this.TxtConfSenha.Name = "TxtConfSenha";
-            this.TxtConfSenha.ReadOnly = true;
-            this.TxtConfSenha.Size = new System.Drawing.Size(168, 14);
-            this.TxtConfSenha.TabIndex = 52;
-            this.TxtConfSenha.Text = "123";
-            this.TxtConfSenha.UseSystemPasswordChar = true;
-            // 
             // BtnApagar
             // 
             this.BtnApagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(15)))), ((int)(((byte)(60)))));
             this.BtnApagar.FlatAppearance.BorderSize = 0;
             this.BtnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnApagar.ForeColor = System.Drawing.Color.Orange;
-            this.BtnApagar.Location = new System.Drawing.Point(79, 485);
+            this.BtnApagar.Location = new System.Drawing.Point(78, 447);
             this.BtnApagar.Name = "BtnApagar";
             this.BtnApagar.Size = new System.Drawing.Size(84, 30);
             this.BtnApagar.TabIndex = 53;
             this.BtnApagar.Text = "APAGAR";
             this.BtnApagar.UseVisualStyleBackColor = false;
+            this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
             // 
             // panel2
             // 
@@ -300,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(248, 575);
+            this.ClientSize = new System.Drawing.Size(248, 533);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.BrnPesquisar);
@@ -310,11 +276,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.TxtEmail);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.BtnSair);
-            this.Controls.Add(this.TxtConfSenha);
             this.Controls.Add(this.BtnApagar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -330,7 +293,6 @@
             this.Text = "ApagarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -350,11 +312,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox TxtEmail;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button BtnSair;
-        private System.Windows.Forms.TextBox TxtConfSenha;
         private System.Windows.Forms.Button BtnApagar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
