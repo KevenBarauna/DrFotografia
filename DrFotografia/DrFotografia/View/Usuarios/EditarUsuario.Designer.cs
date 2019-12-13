@@ -53,6 +53,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.TxtNomePesquisa = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -151,6 +152,7 @@
             this.BtnSalvar.TabIndex = 30;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // panel2
             // 
@@ -242,12 +244,13 @@
             this.BrnPesquisar.FlatAppearance.BorderSize = 0;
             this.BrnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BrnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.BrnPesquisar.Location = new System.Drawing.Point(79, 254);
+            this.BrnPesquisar.Location = new System.Drawing.Point(12, 252);
             this.BrnPesquisar.Name = "BrnPesquisar";
             this.BrnPesquisar.Size = new System.Drawing.Size(84, 30);
             this.BrnPesquisar.TabIndex = 41;
             this.BrnPesquisar.Text = "Pesquisar";
             this.BrnPesquisar.UseVisualStyleBackColor = false;
+            this.BrnPesquisar.Click += new System.EventHandler(this.BrnPesquisar_Click);
             // 
             // panel5
             // 
@@ -318,12 +321,26 @@
             this.panel7.Size = new System.Drawing.Size(218, 5);
             this.panel7.TabIndex = 41;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(119, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 30);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Esqueci a senha";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(242, 623);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.BrnPesquisar);
             this.Controls.Add(this.panel5);
@@ -390,5 +407,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox TxtNomePesquisa;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
     }
 }
