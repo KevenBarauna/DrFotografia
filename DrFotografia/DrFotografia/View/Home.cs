@@ -6,9 +6,10 @@ namespace DrFotografia.View
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string nome)
         {
             InitializeComponent();
+            LblUsuario.Text = nome;
         }
 
         private void BtnSair_Click(object sender, EventArgs e)

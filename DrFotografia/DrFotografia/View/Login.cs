@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DrFotografia.Controller;
 using DrFotografia.View;
 
 namespace DrFotografia
@@ -9,6 +10,9 @@ namespace DrFotografia
         public Login()
         {
             InitializeComponent();
+            SoftwareController sft = new SoftwareController();
+            sft.TesteConexao();
+            sft.IniciaLogin();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -18,9 +22,14 @@ namespace DrFotografia
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            Home tela = new Home();
-            tela.Show();
-            this.Hide();
+            UsuarioController usuario = new UsuarioController();
+            bool liberado = usuario.FazerLogin(TxtNome.Text,TxtSenha.Text);
+
+            if (liberado == true)
+            {
+                this.Hide();
+            }
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

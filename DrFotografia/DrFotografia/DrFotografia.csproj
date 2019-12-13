@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\SoftwareController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DAO\SoftwareDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\_Conexao.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>

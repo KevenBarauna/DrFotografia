@@ -40,10 +40,10 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtSenhaConf = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +63,7 @@
             this.BtnEntrar.TabIndex = 16;
             this.BtnEntrar.Text = "Salvar";
             this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // panel2
             // 
@@ -167,18 +168,18 @@
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
             // 
-            // textBox1
+            // TxtSenhaConf
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(46, 222);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 14);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "123";
-            this.textBox1.UseSystemPasswordChar = true;
+            this.TxtSenhaConf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.TxtSenhaConf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtSenhaConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSenhaConf.ForeColor = System.Drawing.Color.White;
+            this.TxtSenhaConf.Location = new System.Drawing.Point(46, 222);
+            this.TxtSenhaConf.Name = "TxtSenhaConf";
+            this.TxtSenhaConf.Size = new System.Drawing.Size(168, 14);
+            this.TxtSenhaConf.TabIndex = 16;
+            this.TxtSenhaConf.Text = "123";
+            this.TxtSenhaConf.UseSystemPasswordChar = true;
             // 
             // panel4
             // 
@@ -198,17 +199,17 @@
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox2
+            // TxtEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(46, 264);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 14);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "email@hotmail.com";
+            this.TxtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmail.ForeColor = System.Drawing.Color.White;
+            this.TxtEmail.Location = new System.Drawing.Point(46, 264);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(168, 14);
+            this.TxtEmail.TabIndex = 13;
+            this.TxtEmail.Text = "email@hotmail.com";
             // 
             // NovoUsuario
             // 
@@ -219,10 +220,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtEmail);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.BtnSair);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtSenhaConf);
             this.Controls.Add(this.BtnEntrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -259,9 +260,9 @@
         private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtSenhaConf;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtEmail;
     }
 }
