@@ -3,6 +3,9 @@ using System.Windows.Forms;
 using DrFotografia.DAO;
 using DrFotografia.Model;
 using DrFotografia.View;
+using System.Net;//
+using System.Net.Mail;//
+using System;
 
 namespace DrFotografia.Controller
 {
@@ -222,6 +225,68 @@ namespace DrFotografia.Controller
             }
 
         }//VERIFICA SE USUARIO LOGADO É ADMIN
+
+        public UsuarioModel RedefinirSenha(string Nome)
+        {
+            UsuarioModel usuario = new UsuarioModel();
+            UsuarioDAO dao = new UsuarioDAO();
+
+            //PEGAR DADOS DO USUARIO
+            usuario = dao.BuscaDadosUsuarioPorNome(Nome);
+
+            if (usuario.Id == 0)
+            {
+                MessageBox.Show("Erro! Não existe um usuário com esse nome e senha");
+                return usuario;
+            }
+            else
+            {
+
+                //GERAR NOVA SENHA
+                Random NumeroAleatorio = new Random();
+                string NovaSenha = NumeroAleatorio.Next().ToString();
+                
+
+
+                //ENVIAR E-MAIL
+                SmtpClient cliente = new SmtpClient();
+                NetworkCredential credenciais = new NetworkCredential();
+
+                //CONFIGURAÇÕES DO CLIENTE
+                cliente.Host = "smtp.gmail.com";
+                cliente.Port = 587;
+                cliente.EnableSsl = true;
+                cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
+                cliente.UseDefaultCredentials = false;
+
+                //DEFINIT ACESSO E-MAIL
+                credenciais.UserName = "baianofotografia.keven";
+                credenciais.Password = "12345678kel";
+
+                //CREDENCIAIS NO CLIENTE
+                cliente.Credentials = credenciais;
+
+                //MENSAGEM
+                MailMessage mensagem = new MailMessage();
+                mensagem.From = new MailAddress("baianofotografia.keven@gmail.com");
+                mensagem.Subject = "Nova senha do Dr Fotografia";
+                mensagem.Body = "Sua nova senha é: " + NovaSenha;
+                mensagem.To.Add(usuario.Email);
+
+                //ENVIAR
+                cliente.Send(mensagem);
+                MessageBox.Show("E-mail enviado para: " + usuario.Email);
+
+                //ATUALIZAR SEENHA NO BANCO DE DADOS
+                EditarUsuario(usuario.Nome, NovaSenha, NovaSenha, usuario.Email,usuario.Id);
+
+
+
+                //--------------------------------------------
+            }
+
+            return usuario;
+        }//RETORNA USUARIO MODEL
 
 
     }

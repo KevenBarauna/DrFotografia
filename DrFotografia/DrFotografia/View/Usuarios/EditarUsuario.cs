@@ -57,5 +57,10 @@ namespace DrFotografia.View.Usuarios
         {
             usuairo.EditarUsuario(TxtNome.Text, TxtSenha.Text, TxtConfSenha.Text, TxtEmail.Text, usuarioM.Id);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            usuairo.RedefinirSenha(TxtNomePesquisa.Text);
+        }
     }
 }
