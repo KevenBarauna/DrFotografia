@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using DrFotografia.DAO;
 using DrFotografia.Model;
 using DrFotografia.View;
@@ -152,6 +153,28 @@ namespace DrFotografia.Controller
             }
 
             return true;
+        }//SALVAR NOVO USUARIO
+
+        public List<UsuarioModel> VerTodosOsUsuarios()
+        {
+
+            UsuarioDAO dao = new UsuarioDAO();
+            List<UsuarioModel> ListaUsuarios = new List<UsuarioModel>();
+
+            //PEGAR TODOS OS USUARIOS
+            ListaUsuarios = dao.ListarTodosNomesUsuarios();
+
+            if (ListaUsuarios == null)
+            {
+                UsuarioModel usuario = new UsuarioModel();
+                usuario.Id = 0;
+                usuario.Nome = "Erro";
+                usuario.Email = "Erro";
+                ListaUsuarios.Add(usuario);
+                return ListaUsuarios;
+            }
+
+            return ListaUsuarios;
         }//SALVAR NOVO USUARIO
 
 

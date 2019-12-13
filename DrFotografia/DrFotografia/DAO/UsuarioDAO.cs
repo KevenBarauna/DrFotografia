@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using DrFotografia.Model;
 
@@ -189,6 +190,54 @@ namespace DrFotografia.DAO
 
 
         }//EDITA USUARIO
+
+        public List<UsuarioModel> ListarTodosNomesUsuarios()
+        {
+
+            SqlDataReader dr;
+
+
+            List<UsuarioModel> ListadeUsuario = new List<UsuarioModel>();
+
+            cmd.CommandText = "SELECT * FROM TB_USUARIO";
+
+            try
+            {
+                cmd.Connection = conexao.Conectar();
+                dr = cmd.ExecuteReader();
+
+                while (dr.HasRows)
+                {
+                    try
+                    {
+                        dr.Read();
+
+                        UsuarioModel usuario = new UsuarioModel();
+
+                        usuario.Id = Convert.ToInt32(dr["id"]);
+                        usuario.Nome = dr["nome"].ToString();
+                        usuario.Email = dr["email"].ToString();
+
+                        ListadeUsuario.Add(usuario);
+                    }
+                    catch (Exception)
+                    {
+
+                        break;
+                    }
+                    
+                }
+
+            }
+            catch (SqlException e)
+            {
+                return ListadeUsuario;
+            }
+            cmd.Parameters.Clear();
+            conexao.Desconectar();
+
+            return ListadeUsuario;
+        }//VERIFICA SE TEM ESSE NOME NO BANCO
 
     }
 }

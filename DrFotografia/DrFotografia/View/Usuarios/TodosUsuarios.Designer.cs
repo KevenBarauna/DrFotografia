@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodosUsuarios));
-            this.LvEntrega = new System.Windows.Forms.ListView();
+            this.LvUsuarios = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,19 +37,19 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // LvEntrega
+            // LvUsuarios
             // 
-            this.LvEntrega.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LvUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.nome,
             this.email});
-            this.LvEntrega.HideSelection = false;
-            this.LvEntrega.Location = new System.Drawing.Point(12, 33);
-            this.LvEntrega.Name = "LvEntrega";
-            this.LvEntrega.Size = new System.Drawing.Size(333, 505);
-            this.LvEntrega.TabIndex = 13;
-            this.LvEntrega.UseCompatibleStateImageBehavior = false;
-            this.LvEntrega.View = System.Windows.Forms.View.Details;
+            this.LvUsuarios.HideSelection = false;
+            this.LvUsuarios.Location = new System.Drawing.Point(12, 33);
+            this.LvUsuarios.Name = "LvUsuarios";
+            this.LvUsuarios.Size = new System.Drawing.Size(333, 505);
+            this.LvUsuarios.TabIndex = 13;
+            this.LvUsuarios.UseCompatibleStateImageBehavior = false;
+            this.LvUsuarios.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
@@ -95,7 +95,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(359, 596);
             this.Controls.Add(this.BtnSair);
-            this.Controls.Add(this.LvEntrega);
+            this.Controls.Add(this.LvUsuarios);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -108,7 +108,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView LvEntrega;
+        private System.Windows.Forms.ListView LvUsuarios;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader nome;
         private System.Windows.Forms.ColumnHeader email;
