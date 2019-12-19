@@ -27,7 +27,7 @@ namespace DrFotografia.DAO
                 dr = cmd.ExecuteReader();
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 //--IMPLEMENTAR
             }
@@ -58,7 +58,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 Liberado = false;
             }
@@ -116,7 +116,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 ExisteUsuario = false;
             }
@@ -153,7 +153,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 return null;
             }
@@ -189,7 +189,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 return null;
             }
@@ -218,7 +218,7 @@ namespace DrFotografia.DAO
                 conexao.Desconectar();
                 return true;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 return false;
             }
@@ -265,7 +265,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 return ListadeUsuario;
             }
@@ -308,7 +308,7 @@ namespace DrFotografia.DAO
                 }
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 return false;
             }
@@ -333,7 +333,7 @@ namespace DrFotografia.DAO
                 dr = cmd.ExecuteReader();
 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 cmd.Parameters.Clear();
                 conexao.Desconectar();

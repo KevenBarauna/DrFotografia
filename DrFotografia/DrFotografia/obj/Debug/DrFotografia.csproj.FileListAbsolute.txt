@@ -12,4 +12,14 @@ C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\D
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Usuarios.NovoUsuario.resources
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Usuarios.ApagarUsuario.resources
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Usuarios.TodosUsuarios.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.PainelClientes.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Clientes.NovoCliente.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Clientes.EditaCliente.resources
 C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.csprojAssemblyReference.cache
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Clientes.ApagarCliente.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Clientes.TodosClientes.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\bin\Debug\Correios.dll
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\bin\Debug\Correios.pdb
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Eventos.NovoEvento.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.View.Eventos.PainelEvento.resources
+C:\Users\keven.barauna\Source\Repos\DrFotografia\DrFotografia\DrFotografia\obj\Debug\DrFotografia.csproj.CopyComplete

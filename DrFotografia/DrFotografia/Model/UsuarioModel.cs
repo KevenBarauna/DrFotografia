@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DrFotografia.Model
 {
-    class UsuarioModel
+    [Serializable]
+    public class UsuarioModel
     {
         public int Id { get; set; }
         public string Nome { get; set; }

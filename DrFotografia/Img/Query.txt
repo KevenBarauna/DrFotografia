@@ -14,14 +14,52 @@ CREATE TABLE TB_USUARIO
 GO
 
 INSERT INTO TB_USUARIO (nome,senha) VALUES ('admin','admin')
+GO
 INSERT INTO TB_USUARIO (nome,senha) VALUES ('keven','123')
 
 GO
 
-SELECT * FROM TB_USUARIO 
+CREATE TABLE TB_CLIENTE
+(
+	[id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[nome] VARCHAR(50) NOT NULL,
+	[email] VARCHAR(50) NULL,
+        [telefone1] VARCHAR(20) NOT NULL,
+	[telefone2] VARCHAR(20) NULL,
+	[telefone3] VARCHAR(20) NULL,
+	[descricao] VARCHAR(MAX) NULL,
+	
+)
+
+GO
+
+CREATE TABLE TB_EVENTO
+(
+	[id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[idCliente] INT NULL,
+	[valortotal] VARCHAR(50) NOT NULL,
+	[valorpago] VARCHAR(50) NULL,
+        [tipo] VARCHAR(20) NOT NULL,
+	[data] VARCHAR(20) NULL,
+	[hora] VARCHAR(20) NULL,
+	[local] VARCHAR(MAX) NULL,
+	[descricao] VARCHAR(MAX) NULL
+	
+)
+
+GO
+
+ALTER TABLE TB_EVENTO ADD FOREIGN KEY (idCliente) REFERENCES TB_CLIENTE(id);
+
+--SELECT * FROM TB_EVENTO JOIN TB_CLIENTE.nome, TB_CLIENTE.telefone1 ON TB_EVENTO.idCliente = TB_CLIENTE.id
+------------------------------------------------------------------------------------------------
 
 --DROP TABLE TB_; 
 --DELETE FROM TB_USUARIO WHERE id = 5
+--BACKUP DATABASE nome TO DISK = 'c:\....\backup_banco.bak'
+--UPDATE TB_CLIENTE SET idCliente=0;
+
+
 Cores:
 42;42;46 <- Fundo
 50; 88; 253 <-Botão
