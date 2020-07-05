@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Correios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios-Api.1.1.1\lib\portable-net45+win\Correios.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,15 +52,152 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\EventoController.cs" />
+    <Compile Include="Controller\GeradorBinario.cs" />
+    <Compile Include="Controller\GeradorJson.cs" />
+    <Compile Include="Controller\GeradorTxt.cs" />
+    <Compile Include="Controller\GeradorXml.cs" />
+    <Compile Include="Controller\SoftwareController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\EventoDAO.cs" />
+    <Compile Include="DAO\LucroDAO.cs" />
+    <Compile Include="DAO\SoftwareDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\_Conexao.cs" />
+    <Compile Include="Model\ClienteModel.cs" />
+    <Compile Include="Model\EventoModel.cs" />
+    <Compile Include="Model\UsuarioModel.cs" />
+    <Compile Include="View\Clientes\ApagarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="View\Clientes\ApagarCliente.Designer.cs">
+      <DependentUpon>ApagarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\EditaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\EditaCliente.Designer.cs">
+      <DependentUpon>EditaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\NovoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\NovoCliente.Designer.cs">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\PainelClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\PainelClientes.Designer.cs">
+      <DependentUpon>PainelClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\TodosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\TodosClientes.Designer.cs">
+      <DependentUpon>TodosClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Eventos\EditarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Eventos\EditarEvento.Designer.cs">
+      <DependentUpon>EditarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Eventos\NovoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Eventos\NovoEvento.Designer.cs">
+      <DependentUpon>NovoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Eventos\PainelEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Eventos\PainelEvento.Designer.cs">
+      <DependentUpon>PainelEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Eventos\TodosEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Eventos\TodosEventos.Designer.cs">
+      <DependentUpon>TodosEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
+    <Compile Include="View\Usuarios\ApagarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\ApagarUsuario.Designer.cs">
+      <DependentUpon>ApagarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuarios\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuarios\NovoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\NovoUsuario.Designer.cs">
+      <DependentUpon>NovoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuarios\PainelUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\PainelUsuarios.Designer.cs">
+      <DependentUpon>PainelUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuarios\TodosUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuarios\TodosUsuarios.Designer.cs">
+      <DependentUpon>TodosUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Clientes\ApagarCliente.resx">
+      <DependentUpon>ApagarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\EditaCliente.resx">
+      <DependentUpon>EditaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\NovoCliente.resx">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\PainelClientes.resx">
+      <DependentUpon>PainelClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\TodosClientes.resx">
+      <DependentUpon>TodosClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Eventos\EditarEvento.resx">
+      <DependentUpon>EditarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Eventos\NovoEvento.resx">
+      <DependentUpon>NovoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Eventos\PainelEvento.resx">
+      <DependentUpon>PainelEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Eventos\TodosEventos.resx">
+      <DependentUpon>TodosEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -66,6 +209,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Usuarios\ApagarUsuario.resx">
+      <DependentUpon>ApagarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuarios\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuarios\NovoUsuario.resx">
+      <DependentUpon>NovoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuarios\PainelUsuarios.resx">
+      <DependentUpon>PainelUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuarios\TodosUsuarios.resx">
+      <DependentUpon>TodosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

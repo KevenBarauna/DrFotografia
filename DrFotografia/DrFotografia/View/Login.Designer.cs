@@ -65,6 +65,7 @@
             this.TxtNome.Size = new System.Drawing.Size(114, 14);
             this.TxtNome.TabIndex = 1;
             this.TxtNome.Text = "Keven";
+            this.TxtNome.TextChanged += new System.EventHandler(this.TxtNome_TextChanged);
             // 
             // pictureBox2
             // 
@@ -75,6 +76,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -83,6 +85,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(140, 1);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -91,6 +94,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 1);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox3
             // 
@@ -101,6 +105,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // TxtSenha
             // 
@@ -114,6 +119,7 @@
             this.TxtSenha.TabIndex = 4;
             this.TxtSenha.Text = "123";
             this.TxtSenha.UseSystemPasswordChar = true;
+            this.TxtSenha.TextChanged += new System.EventHandler(this.TxtSenha_TextChanged);
             // 
             // BtnEntrar
             // 
@@ -127,6 +133,7 @@
             this.BtnEntrar.TabIndex = 7;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // BtnSair
             // 
