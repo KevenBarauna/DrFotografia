@@ -3,20 +3,20 @@
 
 ##### Sobre o projeto
 
-Um sistema feito em Windows Form para organizar e gerenciar a empresa de fotografia.
+Um sistema feito em Windows Forms para organizar e gerenciar a empresa de fotografia.
 - Cadastrando clientes
-- Exibindo lucros*
-- Enviar e-mail *
-- Agendar reuniões*
-- Agendar dias em cartórios*
-- Agendar enventos
+- Exibindo lucros
+- Enviar e-mail
+- Agendar reuniões
+- Agendar dias em cartórios
+- Agendar eventos
 - Agendar entregas
-Entre outras funcionalidades..
+Entre outras funcionalidades.
 
 ##### Bibliotecas e tecnologias utilizadas:
 - C#
-- Windows Form
-- Sql Server
+- Windows Forms
+- SQL Server
 - API correios `Link` https://viacep.com.br
 
 ##### Inciar o projeto:
@@ -28,7 +28,7 @@ Entre outras funcionalidades..
 
 
 ### Obs:
-- O projeto não foi concluído, fois foi sugerido novas tecnologias
+- O projeto não foi concluído, pois foi sugerido novas tecnologias
 
 ![](https://i.imgur.com/SMaPE7t.jpg)
 
